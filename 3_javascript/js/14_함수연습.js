@@ -160,3 +160,4 @@ greet('길동', sayHello);  // 안녕하시오, 길동!
 greet('미현', sayGoodbye);  // 잘가, 미현!
 
 console.log("git test 중~ 학원에서 작성");
+console.log("git test 중~ 집에서 작성");
