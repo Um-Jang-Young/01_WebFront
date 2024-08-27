@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    div,
+    span {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  태그 : <input type="text" id="tagName"> <br>
+  태그안에 쓸 내용: <input type="text" id="tagInnerText"> <br>
+  color 색상 : <input type="text" id="colorName"> <br>
+  <button id="btn">적용</button>
+
+  <section id="result"></section>
+
+  <script>
+    // 1. btn 이벤트
+    document.getElementById("btn").addEventListener("click", () => {
+      // 2. 값을 가져옴      
+      const result = document.getElementById("result");
+    
+      const tagName = document.createElement(document.getElementById("tagName").value);
+      tagName.innerText = document.getElementById("tagInnerText").value;
+      tagName.style.color = document.querySelector("#colorName").value;
+      
+      // 3. result에 추가
+      result.append(tagName);
+
+
+    });
+
+
+  </script>
+</body>
+
+</html>

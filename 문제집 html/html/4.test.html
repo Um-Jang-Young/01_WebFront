@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>짝수홀수구하기</h1>
+  <h3>짝수홀수를 3초뒤에 alert으로 띄우기</h3>
+  <input type="number" id="numberInput">
+  <button id="btn">click</button>
+
+  <script>
+    // 1. 이벤트 추가
+    document.getElementById("btn").addEventListener("click", () => {
+      // 2. 입력한 값 가져오기
+      const numberInput = Number(document.getElementById("numberInput").value);
+
+      // 3. 입력한 값 짝수, 홀수 구하기
+      // 4. 3초뒤에 alert창으로 띄우기
+      if(numberInput % 2 == 0) {
+        setTimeout(function () {alert(`입력한 값 ${numberInput}은 짝수 입니다`)}, 3000);
+      } else {
+        setTimeout(function () {alert(`입력한 값 ${numberInput}은 홀수 입니다`)}, 3000);
+      }
+
+      
+
+    });
+
+
+
+  </script>
+</body>
+
+</html>
